@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int triangulo_valido(int,int,int);
+int main()
+{
+    int a,b,c,funcao=0;
+
+    printf("\nEntre com tres valores:\n----------------------\n");
+    scanf("%d",&a); scanf("%d",&b); scanf("%d",&c);
+
+    funcao=triangulo_valido(a,b,c);
+
+    if(funcao==1)
+        printf("----------------------\nR: Eh triangulo\n----------------------\n");
+
+    else
+        printf("----------------------\nR: Nao eh triangulo\n----------------------\n");
+
+}
+int triangulo_valido(int a, int b, int c)
+{
+    if(fabs(b-c)<a && a<b+c && fabs(a-c)<b && b<a+c && fabs(a-b)<c && c<a+b) //Fabs = modulo. ex: |-x| = x
+    {
+        return 1;
+    }
+}
