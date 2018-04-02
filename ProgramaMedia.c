@@ -6,23 +6,22 @@ int main(){
 
 		char nome[20];
 		int result=0;
-		int a=0,b=0;
+		int x=0,y=0;
 
 
 
 		printf("\nDigite seu nome: ");
 		gets(nome);
-
 		strupr(nome);
 
 		printf("\nDivite sua nota da av1: ");
-		scanf("%d", &a);
+		scanf("%d", &x);
 
 		printf("\nDivite sua nota da av2: ");
-		scanf("%d", &b);
+		scanf("%d", &y);
 
-		result=aprovado(a,b);
-
+		result=aprovado(x,y);
+	
         if(result==1){
                 printf("\n%s esta aprovado!\n",nome);
         }
@@ -33,14 +32,14 @@ int main(){
 }
 
 int aprovado(int a,int b){
-	int apro=0;
+	int media=0;
 
-	apro=(a+b)/2;
+	media=(a+b)/2;
 
-	if(apro>=6){
+	if(media>=6){
 		return 1;
 	}
-    else{
-        return 0;
-		}
+    	else{
+        	return 0;
 	}
+}
